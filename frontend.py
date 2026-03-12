@@ -7,8 +7,25 @@ BACKEND_URL = "http://127.0.0.1:8000/generate"
 st.set_page_config(page_title="Abhyaung's AI", page_icon="🤖")
 
 #UI Header
-st.title("Local RAG AI System")
-st.markdown("*Running on APPLE M4 | Llama-3 | FastAPI*")
+st.title("Resume Analyzer - Local RAG AI System")
+st.markdown("*Running on Linux Ubuntu | Llama-3 | FastAPI*")
+
+#File Upload section
+with st.sidebar:
+    st.header("Uploade Resume")
+    uploaded_file = st.file_uploader("Upload a PDF", type=["pdf"])
+    
+    if uploaded_file is not None:
+        if st.button("Process Document"):
+            with st.spinner("Analyzing and remembering document..."):
+                #Send the file to FastAPI
+                files = {"file": (uploaded_file.name, uploaded_file.getvalue(), "application/pdf")}
+                responses = requests.post("http://127.0.0.1:8000/upload", files=files)
+
+                if responses.status_code == 200:
+                    st.success("Document Processed! You can now ask questions")
+                else:
+                    st.error("Error: Failed to process the documents")
 
 #SESSION STATE
 if "messages" not in st.session_state:
