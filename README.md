@@ -17,10 +17,10 @@ This is not just a wrapper around an API. It is a full-stack inference engine de
 ## 📸 Screenshots
 
 <p align="center">
-  <img src="snapshots/image1.png" alt="Image1" width="30%"/> 
-  <img src="snapshots/image2.png" alt="Image2" width="30%"/>
-  <img src="snapshots/image3.png" alt="Image3" width="30%"/>
-  <img src="snapshots/image4.png" alt="Image4" width="30%"/>
+  <img src="snapshots/Image1.png" alt="Image1" width="30%"/> 
+  <img src="snapshots/Image2.png" alt="Image2" width="30%"/>
+  <img src="snapshots/Image3.png" alt="Image3" width="30%"/>
+  <img src="snapshots/Image4.png" alt="Image4" width="30%"/>
 </p>
 
 ### System Flow
