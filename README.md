@@ -14,6 +14,15 @@ This is not just a wrapper around an API. It is a full-stack inference engine de
 * **Memory (RAG):** **ChromaDB** for vector storage and semantic search.
 * **Frontend:** **Streamlit** for a ChatGPT-like web interface.
 
+## 📸 Screenshots
+
+<p align="center">
+  <img src="snapshots/image1.png" alt="LandingPage" width="30%"/> 
+  <img src="snapshots/image2.png" alt="LandingPage2" width="30%"/>
+  <img src="snapshots/image3.png" alt="DashBoard" width="30%"/>
+  <img src="snapshots/image4.png" alt="BookingPage" width="30%"/>
+</p>
+
 ### System Flow
 1.  **Ingestion:** User queries are received via the Streamlit UI and sent to the API.
 2.  **Buffering:** Requests are validated and pushed into an `asyncio.Queue` (Non-blocking).
